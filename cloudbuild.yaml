@@ -8,6 +8,8 @@ steps:
         "gcr.io/${PROJECT_ID}/${_SERVICE_NAME}",
         "${_SERVICE_FOLDER}",
       ]
+    env:
+    - "DOCKER_BUILDKIT=1"
 
   - id: "push image"
     name: "gcr.io/cloud-builders/docker"
